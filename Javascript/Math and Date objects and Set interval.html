@@ -1,0 +1,30 @@
+<!doctype html>
+ <html>
+<head>	
+</head>
+<body>	
+<script type="text/javascript">
+  document.write(Math.PI+" "+Math.E);
+  //var n=prompt("Enter a number","");
+  //alert(Math.sqrt(n));
+  function doso()
+  {
+	document.write("hi");
+  }
+  function printtime()
+  {
+	var now=new Date();
+	var hours=now.getHours();
+	var mins=now.getMinutes();
+	var seconds=now.getSeconds();
+	document.write("<br>"+hours+":"+mins+":"+seconds+"   "+p);
+	p++;
+	if(p>10){clearInterval(x);}
+  }
+  //setInterval("doso()",1000);		//Run first parameter every 1000 millisec
+var p=1;  
+var x=setInterval("printtime()",1000);	
+
+</script>	
+</body>
+</html>

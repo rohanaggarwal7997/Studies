@@ -1,0 +1,31 @@
+<!doctype html>
+ <html>
+<head>	
+<script type="text/javascript">
+	function person(name,age)									//Constructor for creating an instance of an object function
+	{
+		this.nam=name;								//Giving the variables of this objects
+		this.ag=age;
+		this.yearsUntilRetire=yearsLeft;	//Can't defin inside
+	}
+	function yearsLeft()
+	{
+		var numYears=65-this.ag;
+		return numYears;
+	}
+	var rohan=new person("Rohan","19");
+	var deeksha=new person("Deeksha","20");
+	bucky={name:"Bucky Roberts",age:24};			//Using object initializors No var here
+</script>
+</head>
+<body>	
+<script type="text/javascript">
+  var x="My name is rohan";						//Every variable is also an object
+  document.write(x.length+"<br>");
+  document.write(rohan.ag+"<br>");
+  document.write(bucky.age+"<br>");
+  document.write(rohan.yearsUntilRetire()+"<br>");
+</script>	
+</body>
+</html>
+<!-- Whenever we make objects we make in head -->

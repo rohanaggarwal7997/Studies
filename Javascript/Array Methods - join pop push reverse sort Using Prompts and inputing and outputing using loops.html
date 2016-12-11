@@ -1,0 +1,36 @@
+<!doctype html>
+ <html>
+<head>	
+</head>
+<body>	
+<script type="text/javascript">
+	//Join method convert array to string
+	var a=new Array("r","o","h","a")
+	var str=a.join();
+	document.write(str);
+	var str1=a.join("-");//Joins with -
+	document.write(str1);
+	//Pop method removes last element
+	a.pop();
+	document.write(a[3]);
+	a.reverse();//Reverses the array
+	a.push("n","hi",3);
+	a.sort();//sort using alphabatical order
+	var s=a.join();
+	document.write(s);
+	
+	
+	//Adding array elements using loops
+	var x=new Array(3);
+	for(i=0;i<3;i++)
+	{
+	x[i]=prompt("First parameter","second parameter");//Very Important
+	}
+	//Cool Technique to print array
+for(i=0;i<x.length;i++)
+		{
+			document.write("<br>"+x[i]);
+		}
+</script>	
+</body>
+</html>

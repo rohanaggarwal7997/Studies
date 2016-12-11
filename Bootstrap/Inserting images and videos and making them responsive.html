@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rohan's website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.sizer{
+			width:700px;
+			height:400px;
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<img src="1.jpg" class="img-rounded img-responsive" width="500px" height="200px"><br><!-- rounded corner-->
+	<img src="2.jpg" class="img-circle" width="500px" height="200px">
+
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+<div class="embed-responsive embed-responsive-16by9" >		<!-- maintain ratio 16by 9 standard-->
+	<<iframe width="560" height="315" src="https://www.youtube.com/embed/x_7YlGv9u1g" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
+<!-- if you put sizer later it will destoy resposiveness  coz bootstrap has container>embed  -->
+<!--
+
+	The Responsive Embed classes only set the aspect-ratio (use .embed-responsive-16by9 for a 16x9 video and .embed-responsive-4by3 for a 4x3 one). They'll take up 100% of the width of their containing block.
+
+In order to give them a width, you'll only need to add a container, for example .sizer, that has a width set.
+
+.sizer {
+  width: 300px;
+}
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="sizer">
+  <div class="embed-responsive embed-responsive-16by9">
+    <video src="http://techslides.com/demos/sample-videos/small.mp4" autoplay controls></video>
+  </div>
+</div>
+Another option is to add it inside a Bootstrap grid like this
+
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="embed-responsive embed-responsive-16by9">
+        <video src="http://techslides.com/demos/sample-videos/small.mp4" autoplay controls></video>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+-->

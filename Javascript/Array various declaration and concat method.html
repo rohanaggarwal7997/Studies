@@ -1,0 +1,25 @@
+<!doctype html>
+ <html>
+<head>	
+</head>
+<body>	
+<script type="text/javascript">
+	var x=new Array("bucky","rohan",5);
+	document.write(x[2]+x[2]);
+	var y=new Array(3);		//However 3,"rohan" works fine and only "rohan" also works fine
+	document.write(y[0]);	//It will be undefined so there can't be asingle number argument
+	y[0]=1;
+	y[1]=1;
+	y[2]=1;
+	document.write(y[0]);
+	var z=new Array(); 	//Creating a shell of an array same to a vector
+	z[5]=1;				//This also works GREAT!!
+	document.write(z[5]);	//Rest values are null ie undefined
+	document.write(z.length);//Variable giving length of the array
+	var a=new Array(1,2,3);		//Remeb=mber array is A
+	document.write(a[0]);
+	var b=y.concat(a);
+	document.write("<br>"+b[0]+b[1]+b[2]+b[3]+b[4]);	
+</script>	
+</body>
+</html>

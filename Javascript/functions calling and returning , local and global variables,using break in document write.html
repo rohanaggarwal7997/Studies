@@ -1,0 +1,33 @@
+<!doctype html>
+ <html>
+<head>	
+</head>
+<body>	
+<script type="text/javascript">
+  function meatball(x,y)
+	{
+		document.write(x+"<br>"+y+"<br>");				//Important using breaks
+		return "a";										//Using return statement
+	}
+	function callmeatball()								//calling function within function
+		{
+			return meatball("bacon","meat")
+		}
+	function spit()									//Important using local and global variables
+		{
+			document.write(girl);
+			girl="chel";							//global variable gets updated no new local variable created
+			document.write(girl);
+		}
+  document.write(callmeatball()+"<br>");
+  var girl="kel";									//Global variable
+  spit();
+  document.write(girl);
+</script>			
+	
+</body>
+</html>
+<!--    
+If you use document.write and pass a null variable it wont print anything
+But if you pass a null variable in a function then it will print undefined
+-->

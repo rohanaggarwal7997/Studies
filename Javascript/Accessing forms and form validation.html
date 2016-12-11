@@ -1,0 +1,26 @@
+<!doctype html>
+ <html>
+<head>	
+<script type="text/javascript">
+	function validate()
+	{
+		if(document.form1.box.checked)
+			{alert("Box is checked");}
+		else{alert("box is not checked");}	
+	}
+</script>   
+</head>
+<body>	
+<form name="form1">
+Username:<input type="text" name="username">
+<br>Password:<input type="password" name="password">
+<br><input type="checkbox" name="box"><input type="button" value="Press me" onClick="validate()">
+<br><input type="submit"  value="clickme"><br>
+</form>
+<script type="text/javascript">
+   document.write(document.forms[0].length,"<br>");
+   document.write(document.forms[0].elements[0].name);
+   document.write(document.form1.username.name);	//Very Interesting way
+</script>	
+</body>
+</html>
