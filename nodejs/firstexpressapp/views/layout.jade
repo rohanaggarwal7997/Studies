@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    - var condition = false
+    ul
+      li.
+        A list item
+        in two lines
+    input(type='text').class-name='#anyid'
+    if condition
+      p= 'Its true'
+
+
+    p='Rohan is the best'
+    if condition
+      p= 'Its true'
+
+    -var array=[1,2,3]
+    each value in array
+      p=value
+
+
+    block content
