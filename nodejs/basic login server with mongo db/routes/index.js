@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var mongo=require('mongodb');
+var mongo=require('mongodb').MongoClient;
 var assert=require('assert');
 var url='mongodb://localhost:27017/test';
 
@@ -22,20 +22,32 @@ router.get('/wrong',function(req,res,next){
 
 })
 router.post('/test/submit',function(req,res,next){
-
+  var result=[]
   var id=req.body.id;
   var pass=req.body.pass;
   mongo.connect(url,function (err,db) {
     assert.equal(null,err);
-    var cursor=db.collection('user-data').find();
+    var cursor=db.collection('userdata').find();
     cursor.forEach(function (doc,err) {
       assert.equal(null,err);
-        if(id==doc.username && pass==doc.pass)
-        {res.redirect('/test/'+id);}
-
+        //if(id==doc.username && pass==doc.pass)
+        //{res.redirect('/test/'+id);}
+       result.push(doc);
+        db.close()
+    },function(){
+        db.close();
+        var condition=false;
+        result.forEach(function(item){
+            if(id==item.username && pass==item.pass)
+            {
+                condition=true;
+            }
+        });
+        res.render('check',{condition:condition,id:id,pass:pass});
 
     });
-          res.redirect('/wrong');
+         // res.redirect('/wrong');
+
   });
   /*
 
@@ -51,7 +63,7 @@ router.post('/register',function(req,res,next){
 
    mongo.connect(url,function(err,db){
      assert.equal(null,err);
-     db.collection('user-data').insertOne(item,function(err,result){
+     db.collection('userdata').insertOne(item,function(err,result){
        assert.equal(null,err);
        db.close();
      })
